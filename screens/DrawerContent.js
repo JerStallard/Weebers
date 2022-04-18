@@ -16,7 +16,7 @@ import {
     DrawerItem
 } from '@react-navigation/drawer';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { AuthContext } from './components/context';
+import { AuthContext } from '../components/context';
 
 
 export function DrawerContent(props){
@@ -90,7 +90,7 @@ export function DrawerContent(props){
                 />
                     <DrawerItem
                     icon={({color, size})=>(
-                        <Icon name="settings-outline"
+                        <Icon name="toolbox-outline"
                         color={color}
                         size={size}
                         />
