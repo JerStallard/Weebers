@@ -1464,6 +1464,13 @@
   resolved "https://registry.npmjs.org/@react-navigation/elements/-/elements-1.3.3.tgz"
   integrity sha512-Lv2lR7si5gNME8dRsqz57d54m4FJtrwHRjNQLOyQO546ZxO+g864cSvoLC6hQedQU0+IJnPTsZiEI2hHqfpEpw==
 
+"@react-navigation/material-bottom-tabs@^6.2.1":
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/@react-navigation/material-bottom-tabs/-/material-bottom-tabs-6.2.1.tgz#5c1aad33e339554f098835208f836183ff87213c"
+  integrity sha512-+0YsLaluzi+lHyBUOm1CELWy9GuFN1yYiTWNhCd6LSckqC7u/OiXiY7QNPX6knOr5Bc6XrdYPvvF/iZW8Hl/Pg==
+  dependencies:
+    "@react-navigation/elements" "^1.3.3"
+
 "@react-navigation/native-stack@^6.6.1":
   version "6.6.1"
   resolved "https://registry.npmjs.org/@react-navigation/native-stack/-/native-stack-6.6.1.tgz"
@@ -4610,7 +4617,7 @@ react-native-linear-gradient@^2.5.6:
 
 react-native-paper@^4.12.0:
   version "4.12.0"
-  resolved "https://registry.npmjs.org/react-native-paper/-/react-native-paper-4.12.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-4.12.0.tgz#3af540be34d9312b341f1eb50c0220720190fe39"
   integrity sha512-4g9bbxbxTkylcriYy8W+EgXo71mrZHhIm044G+4LTp0JaOEWjGJm571OwV5pPAMwN1N8xUs24ymvHfpOjqHpaw==
   dependencies:
     "@callstack/react-theme-provider" "^3.0.7"
@@ -4645,7 +4652,7 @@ react-native-screens@^3.4.0:
 
 react-native-vector-icons@^9.1.0:
   version "9.1.0"
-  resolved "https://registry.npmjs.org/react-native-vector-icons/-/react-native-vector-icons-9.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-9.1.0.tgz#52eaa205f5954d567b7048eb93d58ac854a2c59e"
   integrity sha512-2AHZ/h9d/+rC0odz+OwbGNlc1Lik/pHhSixn4HfC8RtQ8CxfSBZ6gg7bTLcZhdSvZN+ZEGi30Fj+ZnOSQy+smg==
   dependencies:
     prop-types "^15.7.2"

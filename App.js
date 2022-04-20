@@ -159,8 +159,8 @@ const App = () => {
     <AuthContext.Provider value={authContext}>
     <NavigationContainer theme={theme}>
       { loginState.userToken !== null ? (
-        <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
-          <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+        <Drawer.Navigator screenOptions={{ headerShown: false }} drawerContent={props => <DrawerContent {...props}  />}>
+          <Drawer.Screen name="HomeDrawer" component={MainTabScreen}   />
           <Drawer.Screen name="SupportScreen" component={SupportScreen} />
           <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
           <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
