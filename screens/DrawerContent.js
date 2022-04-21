@@ -15,27 +15,26 @@ import {
     DrawerContentScrollView,
     DrawerItem
 } from '@react-navigation/drawer';
+
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { AuthContext } from '../components/context';
 
+import{ AuthContext } from '../components/context';
 
-export function DrawerContent(props){
+export function DrawerContent(props) {
 
-    const [isDarkTheme, setIsDarkTheme] = React.useState(false);
-    const {signOut} = React.useContext(AuthContext);
-    const toggleTheme = () =>{
-        setIsDarkTheme(!isDarkTheme);
-    }
+    const paperTheme = useTheme();
+
+    const { signOut, toggleTheme } = React.useContext(AuthContext);
 
     return(
         <View style={{flex:1}}>
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
-                   <View style={styles.userInfoSection}>
-                        <View style={{flexDirection:'row',marginTop:15}}>
-                            <Avatar.Image
+                    <View style={styles.userInfoSection}>
+                        <View style={{flexDirection:'row',marginTop: 15}}>
+                            <Avatar.Image 
                                 source={{
-                                    uri:'https://pbs.twimg.com/profile_images/1513120171023552521/Ojc8JWx__400x400.jpg'
+                                    uri: 'https://pbs.twimg.com/profile_images/1513120171023552521/Ojc8JWx__400x400.jpg'
                                 }}
                                 size={50}
                             />
@@ -55,88 +54,90 @@ export function DrawerContent(props){
                                 <Caption style={styles.caption}>Followers</Caption>
                             </View>
                         </View>
-                   </View>
+                    </View>
 
                     <Drawer.Section style={styles.drawerSection}>
-                    <DrawerItem
-                    icon={({color, size})=>(
-                        <Icon name="home-outline"
-                        color={color}
-                        size={size}
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="home-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Home"
+                            onPress={() => {props.navigation.navigate('Home')}}
                         />
-                    )}
-                    label="Home"
-                    onPress={()=>{}}
-                />
-                <DrawerItem
-                    icon={({color, size})=>(
-                        <Icon name="account-outline"
-                        color={color}
-                        size={size}
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Profile"
+                            onPress={() => {props.navigation.navigate('Profile')}}
                         />
-                    )}
-                    label="Profile"
-                    onPress={()=>{}}
-                />
-                <DrawerItem
-                    icon={({color, size})=>(
-                        <Icon name="bookmark-outline"
-                        color={color}
-                        size={size}
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="bookmark-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Bookmarks"
+                            onPress={() => {props.navigation.navigate('BookmarkScreen')}}
                         />
-                    )}
-                    label="Bookmarks"
-                    onPress={()=>{}}
-                />
-                    <DrawerItem
-                    icon={({color, size})=>(
-                        <Icon name="toolbox-outline"
-                        color={color}
-                        size={size}
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="toolbox-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Settings"
+                            onPress={() => {props.navigation.navigate('SettingsScreen')}}
                         />
-                    )}
-                    label="Setings"
-                    onPress={()=>{}}
-                />
-                
-                <DrawerItem
-                    icon={({color, size})=>(
-                        <Icon name="account-check-outline"
-                        color={color}
-                        size={size}
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Support"
+                            onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
-                    )}
-                    label="Support"
-                    onPress={()=>{}}
-                />
                     </Drawer.Section>
                     <Drawer.Section title="Preferences">
-                        <TouchableRipple onPress={() =>{toggleTheme()}}>
+                        <TouchableRipple onPress={() => {toggleTheme()}}>
                             <View style={styles.preference}>
                                 <Text>Dark Theme</Text>
                                 <View pointerEvents="none">
-                                <Switch value={isDarkTheme}/>
+                                    <Switch value={paperTheme.dark}/>
                                 </View>
-                                
                             </View>
                         </TouchableRipple>
                     </Drawer.Section>
-
                 </View>
             </DrawerContentScrollView>
             <Drawer.Section style={styles.bottomDrawerSection}>
-                <DrawerItem
-                    icon={({color, size})=>(
-                        <Icon name="exit-to-app"
+                <DrawerItem 
+                    icon={({color, size}) => (
+                        <Icon 
+                        name="exit-to-app" 
                         color={color}
                         size={size}
                         />
                     )}
-                    label="Sign out"
-                    onPress={()=>{signOut()}}
+                    label="Sign Out"
+                    onPress={() => {signOut()}}
                 />
             </Drawer.Section>
-            
         </View>
     );
 }
