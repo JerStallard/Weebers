@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 const EditProfileScreen = () => {
     return (
       <View style={styles.container}>
-        <Text>Profile Screen</Text>
+        <Text>ExploreScreen</Text>
         <Button
           title="Click Here"
           onPress={() => alert('Button Clicked!')}

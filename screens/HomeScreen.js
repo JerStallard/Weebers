@@ -66,7 +66,7 @@ const HomeScreen = ({navigation}) => {
             navigation.navigate('CardListScreen', {title: 'Restaurant'})
           }>
           <View style={styles.categoryIcon}>
-            <Ionicons name="ios-restaurant" size={35} color="#FF6347" />
+            <Ionicons name="ios-restaurant" size={35} color="#b31b1b" />
           </View>
           <Text style={styles.categoryBtnTxt}>Restaurant</Text>
         </TouchableOpacity>
@@ -79,14 +79,14 @@ const HomeScreen = ({navigation}) => {
             <MaterialCommunityIcons
               name="food-fork-drink"
               size={35}
-              color="#FF6347"
+              color="#b31b1b"
             />
           </View>
           <Text style={styles.categoryBtnTxt}>Fastfood Center</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="food" size={35} color="#FF6347" />
+            <MaterialCommunityIcons name="food" size={35} color="#b31b1b" />
           </View>
           <Text style={styles.categoryBtnTxt}>Snacks Corner</Text>
         </TouchableOpacity>
@@ -94,19 +94,19 @@ const HomeScreen = ({navigation}) => {
       <View style={[styles.categoryContainer, {marginTop: 10}]}>
         <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
-            <Fontisto name="hotel" size={35} color="#FF6347" />
+            <Fontisto name="hotel" size={35} color="#b31b1b" />
           </View>
           <Text style={styles.categoryBtnTxt}>Hotels</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
-            <Ionicons name="md-restaurant" size={35} color="#FF6347" />
+            <Ionicons name="md-restaurant" size={35} color="#b31b1b" />
           </View>
           <Text style={styles.categoryBtnTxt}>Dineouts</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
-            <MaterialIcons name="expand-more" size={35} color="#FF6347" />
+            <MaterialIcons name="expand-more" size={35} color="#b31b1b" />
           </View>
           <Text style={styles.categoryBtnTxt}>Show More</Text>
         </TouchableOpacity>

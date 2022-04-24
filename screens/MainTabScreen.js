@@ -30,7 +30,7 @@ const MainTabScreen = () => (
     component={HomeStackScreen}
     options={{
       tabBarLabel: 'Home',
-      tabBarColor: '#FF6347',
+      tabBarColor: '#b31b1b',
       tabBarIcon: ({color}) => (
         <Icon name="ios-home" color={color} size={26} />
       ),
