@@ -4,12 +4,11 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import HomeScreen from './HomeScreen';
 import ExploreScreen from './ExploreScreen';
 import ProfileScreen from './ProfileScreen';
 import NotificationScreen from './NotificationScreen';
-
 import EditProfileScreen from './EditProfileScreen';
 
 import {useTheme, Avatar} from 'react-native-paper';
@@ -94,7 +93,7 @@ const HomeStackScreen = ({navigation}) => {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'FoodFinder',
+          title: 'Weebers',
           headerLeft: () => (
             <View style={{marginLeft: 10}}>
               <Icon.Button
