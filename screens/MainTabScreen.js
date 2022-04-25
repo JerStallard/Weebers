@@ -154,33 +154,42 @@ const HomeStackScreen = ({navigation}) => {
   );
 };
 
-const NotificationStackScreen = ({navigation}) => (
-  <NotificationStack.Navigator
-    screenOptions={{
-      headerStyle: {
-        backgroundColor: '#1f65ff',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    }}>
-    <NotificationStack.Screen
-      name="Notifications"
-      component={NotificationScreen}
-      options={{
-        headerLeft: () => (
-          <Icon.Button
-            name="ios-menu"
-            size={25}
-            backgroundColor="#1f65ff"
-            onPress={() => navigation.openDrawer()}
-          />
-        ),
-      }}
-    />
-  </NotificationStack.Navigator>
-);
+const NotificationStackScreen = ({navigation}) => {
+  const {colors} = useTheme();
+
+  return (
+    <NotificationStack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: colors.background,
+          shadowColor: colors.background, // iOS
+          elevation: 0, // Android
+        },
+        headerTintColor: colors.text,
+      }}>
+      <ProfileStack.Screen
+        name="Profile"
+        component={NotificationScreen}
+        options={{
+          title: '',
+          headerLeft: () => (
+            <View style={{marginLeft: 10}}>
+              <Icon.Button
+                name="ios-menu"
+                size={25}
+                backgroundColor={colors.background}
+                color={colors.text}
+                onPress={() => navigation.openDrawer()}
+              />
+            </View>
+          )
+         
+        }}
+      />
+    </NotificationStack.Navigator>
+  );
+  
+};
 
 
 const ProfileStackScreen = ({navigation}) => {
