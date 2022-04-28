@@ -62,10 +62,10 @@ const MainTabScreen = () => (
     name="Explore"
     component={ExploreScreen}
     options={{
-      tabBarLabel: 'Explore',
+      tabBarLabel: 'Map',
       tabBarColor: '#d02860',
       tabBarIcon: ({color}) => (
-        <Icon name="ios-aperture" color={color} size={26} />
+        <Icon name="ios-map" color={color} size={26} />
       ),
     }}
   />

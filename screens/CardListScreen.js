@@ -1,13 +1,25 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
+import {data} from '../model/data';
+import Card from '../components/Card';
 
-const CardListScreen = () => {
+const CardListScreen = ({navigation}) => {
+
+    const renderItem = ({item}) => {
+        return (
+            <Card 
+                itemData={item}
+                onPress={()=> navigation.navigate()}
+            />
+        );
+    };
+
     return (
       <View style={styles.container}>
-        <Text>Bookmark Screen</Text>
-        <Button
-          title="Click Here"
-          onPress={() => alert('Button Clicked!')}
+        <FlatList 
+            data={data}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
         />
       </View>
     );
@@ -18,7 +30,7 @@ export default CardListScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1, 
-    alignItems: 'center', 
-    justifyContent: 'center'
+    width: '90%',
+    alignSelf: 'center'
   },
 });

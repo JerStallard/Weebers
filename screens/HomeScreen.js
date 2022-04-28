@@ -20,7 +20,47 @@ const HomeScreen = ({navigation}) => {
   const theme = useTheme();
 
   return (
+    
     <ScrollView style={styles.container}>
+
+<View style={styles.categoryContainer}>
+        <TouchableOpacity
+          style={styles.categoryBtn}
+          onPress={() =>
+            navigation.navigate('CardListScreen', {title: 'Shop Now'})
+          }>
+          <View style={styles.categoryIcon}>
+          <MaterialCommunityIcons
+              name="shopping-outline"
+              size={35}
+              color="#b31b1b"
+            />
+          </View>
+          <Text style={styles.categoryBtnTxt}>Shop Now</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.categoryBtn}
+          onPress={() =>
+            navigation.navigate('CardListScreen', {title: 'Added to Cart'})
+          }>
+          <View style={styles.categoryIcon}>
+            <MaterialCommunityIcons
+              name="cart"
+              size={35}
+              color="#b31b1b"
+            />
+          </View>
+          <Text style={styles.categoryBtnTxt}>Added to Cart</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+          <View style={styles.categoryIcon}>
+            <MaterialCommunityIcons name="receipt" size={35} color="#b31b1b" />
+          </View>
+          <Text style={styles.categoryBtnTxt}>My Purchases</Text>
+        </TouchableOpacity>
+      </View>
+      
+
       <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
       <View style={styles.sliderContainer}>
         <Swiper
@@ -30,28 +70,42 @@ const HomeScreen = ({navigation}) => {
           activeDotColor="#FF6347">
           <View style={styles.slide}>
             <Image
-              source={require('../assets/banners/cover1.png')}
+              source={require('../assets/banners/06.jpg')}
               resizeMode="cover"
               style={styles.sliderImage}
             />
           </View>
           <View style={styles.slide}>
             <Image
-              source={require('../assets/banners/cover2.jpg')}
+              source={require('../assets/banners/07.png')}
               resizeMode="cover"
               style={styles.sliderImage}
             />
           </View>
           <View style={styles.slide}>
             <Image
-              source={require('../assets/banners/cover3.jpg')}
+              source={require('../assets/banners/08.png')}
               resizeMode="cover"
               style={styles.sliderImage}
             />
           </View>
           <View style={styles.slide}>
             <Image
-              source={require('../assets/banners/cover4.jpg')}
+              source={require('../assets/banners/09.png')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/banners/10.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            />
+          </View>
+          <View style={styles.slide}>
+            <Image
+              source={require('../assets/banners/11.jpg')}
               resizeMode="cover"
               style={styles.sliderImage}
             />
@@ -59,58 +113,7 @@ const HomeScreen = ({navigation}) => {
         </Swiper>
       </View>
 
-      <View style={styles.categoryContainer}>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Restaurant'})
-          }>
-          <View style={styles.categoryIcon}>
-            <Ionicons name="ios-restaurant" size={35} color="#b31b1b" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Restaurant</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Fastfood Center'})
-          }>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons
-              name="food-fork-drink"
-              size={35}
-              color="#b31b1b"
-            />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Fastfood Center</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="food" size={35} color="#b31b1b" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Snacks Corner</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={[styles.categoryContainer, {marginTop: 10}]}>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <Fontisto name="hotel" size={35} color="#b31b1b" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Hotels</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <Ionicons name="md-restaurant" size={35} color="#b31b1b" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Dineouts</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialIcons name="expand-more" size={35} color="#b31b1b" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Show More</Text>
-        </TouchableOpacity>
-      </View>
+      
 
       <View style={styles.cardsWrapper}>
         <Text
@@ -125,13 +128,13 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
             <Image
-              source={require('../assets/banners/cover5.jpg')}
+              source={require('../assets/banners/13.jpg')}
               resizeMode="cover"
               style={styles.cardImg}
             />
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
+            <Text style={styles.cardTitle}>Nezuko Kamado Banpresto Demon Slayer</Text>
             <StarRating ratings={4} reviews={99} />
             <Text style={styles.cardDetails}>
               Amazing description for this amazing place
@@ -141,13 +144,13 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
             <Image
-              source={require('../assets/banners/cover1.png')}
+              source={require('../assets/banners/14.jpg')}
               resizeMode="cover"
               style={styles.cardImg}
             />
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
+            <Text style={styles.cardTitle}>Tanjiro Kamado Good Smile Nendoroid Swacchao!</Text>
             <StarRating ratings={4} reviews={99} />
             <Text style={styles.cardDetails}>
               Amazing description for this amazing place
@@ -157,13 +160,13 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
             <Image
-              source={require('../assets/banners/cover2.jpg')}
+              source={require('../assets/banners/10.jpg')}
               resizeMode="cover"
               style={styles.cardImg}
             />
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Amazing Food Place</Text>
+            <Text style={styles.cardTitle}>Spy x Family (T-Shirt)</Text>
             <StarRating ratings={4} reviews={99} />
             <Text style={styles.cardDetails}>
               Amazing description for this amazing place
