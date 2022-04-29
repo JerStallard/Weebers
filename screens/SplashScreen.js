@@ -3,26 +3,37 @@ import {View, Text, Button, StyleSheet, Dimensions, Image, TouchableOpacity} fro
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {LinearGradient} from 'expo-linear-gradient';
 import * as Animatable from 'react-native-animatable';
+import LottieView from 'lottie-react-native';
 
 const SplashScreen  = ({navigation}) =>{
     return(
         <View style={styles.container}>
-            <View style={styles.header}>
+            <View style={styles.header} >
                 <Animatable.Image
                     animation="bounceIn"
                     duration={1500}
                    
-                source={require('../assets/fairytail.png')}
+                source={require('../assets/splash.jpg')}
                 style={styles.logo}
-                resizeMode="stretch"
+                resizeMode="center"
                 />
             </View>
             <Animatable.View 
             style={styles.footer}
             animation="fadeInUp"
             >
-                <Text style={styles.title}>Welcome to Fairy Tail</Text>
-                <Text style={styles.text}>Sign in with account</Text>
+                <LottieView source={require('../assets/26427-no-face-baby-spirited-away.json')}
+                  autoPlay={true}
+                  loop={true}
+                  
+                  style={{
+                    flex: 1,  
+                    marginLeft: '0%',
+                    marginBottom: '17%',
+                    
+                  }} />
+                {/* <Text style={styles.title}>Welcome to Weebers</Text> */}
+               
                 <View style={styles.button}>
                 <TouchableOpacity onPress={()=>navigation.navigate('SignInScreen')}>
                     <LinearGradient
@@ -37,8 +48,10 @@ const SplashScreen  = ({navigation}) =>{
                         />
                     </LinearGradient>
                 </TouchableOpacity>
+                <Text style={styles.text}>Sign in with account</Text>
                 </View>
             </Animatable.View>
+           
         </View>
     );
 };
@@ -46,47 +59,51 @@ const SplashScreen  = ({navigation}) =>{
 export default SplashScreen;
 
 const {height} = Dimensions.get("screen");
-const height_logo = height * 0.28;
+const height_logo = height * 2;
 
 
 const styles = StyleSheet.create({
     container: {
-        flex:1,
+        flex:2,
         backgroundColor: '#b31b1b'
     },
 header:{
-    flex: 2,
+    flex: 6,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    
     
 },
 footer:{
-    flex: 1,
+    
     backgroundColor: '#fff',
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-    paddingVertical: 50,
-    paddingHorizontal: 30
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    paddingVertical: 70,
+    paddingHorizontal: 40,
+    
 },
 logo:{
     width: height_logo,
-    height: height_logo
+    height: height_logo,
 },
 title: {
     color: '#05375a',
     fontSize: 30,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    
 },
 text: {
     color: 'grey',
-    marginTop:5
+    marginTop:5,
+    textAlign: 'center'
 },
 button: {
-    alignItems: 'flex-end',
+    alignItems: 'center',
     marginTop: 30
 },
 signIn: {
-    width: 150,
+    width: 110,
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',

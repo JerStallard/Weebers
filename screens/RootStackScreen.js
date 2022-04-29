@@ -10,9 +10,7 @@ const RootStack = createNativeStackNavigator();
 
 const RootStackScreen = ({navigation}) => (
     <RootStack.Navigator screenOptions={{
-        headerStyle:{
-            backgroundColor:'#b31b1b'
-        },
+        headerShown: false,
         headerTintColor:'#fff',
         headerTitleStyle:{
             fontweight:'bold'
