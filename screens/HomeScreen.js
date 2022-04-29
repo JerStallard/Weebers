@@ -41,7 +41,7 @@ const HomeScreen = ({navigation}) => {
         <TouchableOpacity
           style={styles.categoryBtn}
           onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Added to Cart'})
+            navigation.navigate('AddedToCart', {title: 'Added To Cart'})
           }>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons
@@ -50,12 +50,17 @@ const HomeScreen = ({navigation}) => {
               color="#b31b1b"
             />
           </View>
+          
           <Text style={styles.categoryBtnTxt}>Added to Cart</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+        <TouchableOpacity style={styles.categoryBtn}  
+        onPress={() =>
+            navigation.navigate('Purchases', {title: 'My Purchases'})
+          }>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons name="receipt" size={35} color="#b31b1b" />
           </View>
+
           <Text style={styles.categoryBtnTxt}>My Purchases</Text>
         </TouchableOpacity>
       </View>
@@ -135,9 +140,9 @@ const HomeScreen = ({navigation}) => {
           </View>
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Nezuko Kamado Banpresto Demon Slayer</Text>
-            <StarRating ratings={4} reviews={99} />
+            <StarRating ratings={5} reviews={99} />
             <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
+            ₱850.00
             </Text>
           </View>
         </View>
@@ -151,9 +156,9 @@ const HomeScreen = ({navigation}) => {
           </View>
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Tanjiro Kamado Good Smile Nendoroid Swacchao!</Text>
-            <StarRating ratings={4} reviews={99} />
+            <StarRating ratings={5} reviews={102} />
             <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
+            ₱1,595.00
             </Text>
           </View>
         </View>
@@ -167,9 +172,9 @@ const HomeScreen = ({navigation}) => {
           </View>
           <View style={styles.cardInfo}>
             <Text style={styles.cardTitle}>Spy x Family (T-Shirt)</Text>
-            <StarRating ratings={4} reviews={99} />
+            <StarRating ratings={5} reviews={112} />
             <Text style={styles.cardDetails}>
-              Amazing description for this amazing place
+            ₱350.00
             </Text>
           </View>
         </View>

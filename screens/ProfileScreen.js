@@ -52,11 +52,11 @@ const ProfileScreen = () => {
           borderRightColor: '#dddddd',
           borderRightWidth: 1
         }]}>
-          <Title>₹140.50</Title>
+          <Title>₱100,350.00</Title>
           <Caption>Wallet</Caption>
         </View>
         <View style={styles.infoBox}>
-          <Title>12</Title>
+          <Title>6</Title>
           <Caption>Orders</Caption>
         </View>
     </View>
@@ -64,13 +64,13 @@ const ProfileScreen = () => {
     <View style={styles.menuWrapper}>
       <TouchableRipple onPress={() => {}}>
         <View style={styles.menuItem}>
-          <Icon name="heart-outline" color="#FF6347" size={25}/>
+          <Icon name="heart-outline" color="#b31b1b" size={25}/>
           <Text style={styles.menuItemText}>Your Favorites</Text>
         </View>
       </TouchableRipple>
       <TouchableRipple onPress={() => {}}>
         <View style={styles.menuItem}>
-          <Icon name="credit-card" color="#FF6347" size={25}/>
+          <Icon name="credit-card" color="#b31b1b" size={25}/>
           <Text style={styles.menuItemText}>Payment</Text>
         </View>
       </TouchableRipple>
@@ -82,13 +82,13 @@ const ProfileScreen = () => {
       </TouchableRipple> */}
       <TouchableRipple onPress={() => {}}>
         <View style={styles.menuItem}>
-          <Icon name="account-check-outline" color="#FF6347" size={25}/>
+          <Icon name="account-check-outline" color="#b31b1b" size={25}/>
           <Text style={styles.menuItemText}>Support</Text>
         </View>
       </TouchableRipple>
       <TouchableRipple onPress={() => {}}>
         <View style={styles.menuItem}>
-          <Icon name="toolbox-outline" color="#FF6347" size={25}/>
+          <Icon name="toolbox-outline" color="#b31b1b" size={25}/>
           <Text style={styles.menuItemText}>Settings</Text>
         </View>
       </TouchableRipple>

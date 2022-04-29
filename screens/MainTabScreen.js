@@ -10,12 +10,14 @@ import ExploreScreen from './ExploreScreen';
 import ProfileScreen from './ProfileScreen';
 import NotificationScreen from './NotificationScreen';
 import EditProfileScreen from './EditProfileScreen';
+import Purchases from './Purchases';
 
 import {useTheme, Avatar} from 'react-native-paper';
 import {View} from 'react-native-animatable';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import CardListScreen from './CardListScreen';
 import CardItemDetails from './CardItemDetails'
+import AddedToCart from './AddedToCart';
 
 const HomeStack = createStackNavigator();
 const NotificationStack = createStackNavigator();
@@ -139,15 +141,20 @@ const HomeStackScreen = ({navigation}) => {
           headerBackTitleVisible: false
         })}
       />
-      <HomeStack.Screen 
-        name="CardItemDetails"
-        component={CardItemDetails}
+     <HomeStack.Screen 
+        name="AddedToCart"
+        component={AddedToCart}
         options={({route}) => ({
-          // title: route.params.title,
-          headerBackTitleVisible: false,
-          headerTitle: false,
-          headerTransparent: true,
-          headerTintColor: '#fff'
+          title: route.params.title,
+          headerBackTitleVisible: false
+        })}
+      />
+       <HomeStack.Screen 
+        name="Purchases"
+        component={Purchases}
+        options={({route}) => ({
+          title: route.params.title,
+          headerBackTitleVisible: false
         })}
       />
     </HomeStack.Navigator>
@@ -167,8 +174,8 @@ const NotificationStackScreen = ({navigation}) => {
         },
         headerTintColor: colors.text,
       }}>
-      <ProfileStack.Screen
-        name="Profile"
+      <NotificationStack.Screen
+        name="Notification"
         component={NotificationScreen}
         options={{
           title: '',
