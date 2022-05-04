@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "foodfinder",
-    "slug": "foodfinder",
+    "name": "Weebers",
+    "slug": "Weebers",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,6 +10,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -17,13 +18,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "Weebers"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/download.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.jer_stallard.Weebers"
     },
     "web": {
       "favicon": "./assets/favicon.png"
